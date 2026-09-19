@@ -385,3 +385,68 @@ export const order = {
     again: "Start another order",
   },
 } as const;
+
+export const footer = {
+  columns: [
+    {
+      id: "order",
+      icon: "orders",
+      title: "Order",
+      links: [
+        { label: "Place an order", action: "order" },
+        { label: "How it works", href: "#how-it-works" },
+        { label: "Pricing", href: "#estimate" },
+        { label: "Track an order", href: "#estimate" },
+      ],
+    },
+    {
+      id: "stores",
+      icon: "countries",
+      title: "Stores",
+      links: [
+        { label: "Shein", href: "#stores" },
+        { label: "Temu", href: "#stores" },
+        { label: "Amazon", href: "#stores" },
+        { label: "Zara", href: "#stores" },
+        { label: "ASOS", href: "#stores" },
+        { label: "Sephora", href: "#stores" },
+      ],
+    },
+    {
+      id: "why",
+      icon: "promises",
+      title: "Why Yopersh",
+      links: [
+        { label: "The problem, solved", href: "#solutions" },
+        { label: "Two ways to order", href: "#two-ways" },
+        { label: "Why shoppers stay", href: "#trust" },
+        { label: "FAQ", href: "#faq" },
+      ],
+    },
+    {
+      id: "contact",
+      icon: "support",
+      title: "Contact",
+      links: [
+        { label: "Chat on WhatsApp", href: "whatsapp" },
+        { label: "Call us", href: "tel" },
+        { label: "Kenya and Uganda", href: null },
+      ],
+    },
+    {
+      id: "concept",
+      icon: "rating",
+      title: "Built with",
+      links: [
+        { label: "FeralUI", href: "https://feralui.dev" },
+        { label: "beUI", href: "https://beui.dev" },
+        { label: "Motion", href: "https://motion.dev" },
+        { label: "Base UI", href: "https://base-ui.com" },
+      ],
+    },
+  ],
+  markAlt: "Yopersh concept mark: a glossy Y with a glowing terracotta orb at its centre",
+  copyright: "© 2026 Yopersh concept",
+  disclaimer:
+    "A concept redesign. Not affiliated with or endorsed by Yopersh. Store logos are trademarks of their respective owners. Illustrations and the mark are AI-generated for this concept.",
+} as const;
