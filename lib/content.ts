@@ -204,3 +204,60 @@ export const twoWays = {
   youLabel: "You",
   weLabel: "We",
 } as const;
+
+export const estimate = {
+  eyebrow: "Estimate & track",
+  title: "See the price before we buy. Follow it until it lands.",
+  sub: "Pack a sample box to see how your delivered price adds up, then track a demo order from the store to your door.",
+  builder: {
+    title: "Fill your box",
+    hint: "Drag items into the box, or tap them.",
+    boxLabel: "Your box",
+    empty: "Nothing packed yet. Add an item to see your price.",
+    itemsLabel: "Items",
+    serviceFee: "Service fee",
+    customs: "Customs & duties (est.)",
+    delivery: "Delivery",
+    total: "Delivered price",
+    stamp: "Quoted before we buy",
+    note: "Illustrative numbers for this concept, not Yopersh's real rates.",
+    dropHint: "Drop here",
+  },
+  /** Illustrative rates only. */
+  rates: {
+    serviceFeePct: 0.1,
+    serviceFeeMin: 3,
+    customsPct: 0.12,
+    deliveryPerKg: 7.5,
+    deliveryMin: 8,
+  },
+  items: [
+    { id: "dress", name: "Summer dress", price: 28, kg: 0.4, src: "/estimate/dress.webp", w: 254, h: 352 },
+    { id: "sneakers", name: "Sneakers", price: 45, kg: 1.0, src: "/estimate/sneakers.webp", w: 352, h: 326 },
+    { id: "handbag", name: "Handbag", price: 60, kg: 0.8, src: "/estimate/handbag.webp", w: 327, h: 352 },
+    { id: "perfume", name: "Perfume", price: 55, kg: 0.3, src: "/estimate/perfume.webp", w: 259, h: 352 },
+    { id: "phone", name: "Smartphone", price: 320, kg: 0.5, src: "/estimate/phone.webp", w: 222, h: 352 },
+    { id: "headphones", name: "Headphones", price: 90, kg: 0.6, src: "/estimate/headphones.webp", w: 302, h: 352 },
+  ],
+} as const;
+
+export const tracking = {
+  title: "Track it live",
+  prompt: "Enter your order code",
+  hint: "This is a demo. Use the sample code to see an order travel.",
+  demoCode: "4821",
+  demoLabel: "Use demo code",
+  errorText: "That code isn't right. Try the demo code.",
+  checking: "Finding your order",
+  replay: "Replay",
+  orderLabel: "Order",
+  stages: [
+    { id: "received", label: "Order received", detail: "We've got your cart", src: "/journey/receipt-a.webp", w: 424, h: 516 },
+    { id: "bought", label: "Bought for you", detail: "Purchased from the store", src: "/stickers/parcel.webp", w: 448, h: 448 },
+    { id: "hub", label: "At the Dubai hub", detail: "Consolidated with your other items", src: "/journey/dubai.webp", w: 465, h: 516 },
+    { id: "flight", label: "In flight", detail: "On its way to Nairobi", src: "/journey/plane-side.webp", w: 516, h: 283 },
+    { id: "nairobi", label: "Landed in Nairobi", detail: "Clearing customs", src: "/journey/nairobi.webp", w: 507, h: 516 },
+    { id: "van", label: "Out for delivery", detail: "A van is heading your way", src: "/journey/van-green.webp", w: 516, h: 457 },
+    { id: "home", label: "Delivered", detail: "Enjoy it!", src: "/journey/home.webp", w: 516, h: 511 },
+  ],
+} as const;
