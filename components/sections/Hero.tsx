@@ -5,6 +5,7 @@ import { motion, useReducedMotion } from "motion/react";
 import { useTheme } from "next-themes";
 import { useSyncExternalStore } from "react";
 import { hero, whatsapp } from "@/lib/content";
+import { openOrder } from "@/lib/order";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -78,6 +79,11 @@ export default function Hero() {
             <div className="flex shrink-0 flex-wrap gap-3">
               <a
                 href={whatsapp.href}
+                onClick={(event) => {
+                  // Opens the order modal; the plain WhatsApp link stays as the no-JS fallback.
+                  event.preventDefault();
+                  openOrder();
+                }}
                 className="rounded-full bg-white px-6 py-3 text-sm font-medium text-black transition-colors hover:bg-terra hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:text-base"
               >
                 {hero.primaryCta}

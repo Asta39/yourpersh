@@ -13,9 +13,9 @@ import {
   useCallback,
   useLayoutEffect,
   useRef,
-  useSyncExternalStore,
 } from "react";
 import { stores, twoWays } from "@/lib/content";
+import { useIsDesktop } from "@/lib/use-is-desktop";
 import {
   desktop,
   mobile,
@@ -37,18 +37,6 @@ const smooth = (t: number) => {
   const c = clamp(t, 0, 1);
   return c * c * (3 - 2 * c);
 };
-
-function useIsDesktop() {
-  return useSyncExternalStore(
-    (notify) => {
-      const query = window.matchMedia("(min-width: 768px)");
-      query.addEventListener("change", notify);
-      return () => query.removeEventListener("change", notify);
-    },
-    () => window.matchMedia("(min-width: 768px)").matches,
-    () => false,
-  );
-}
 
 const logoFor = (id: string) =>
   stores.items.find(

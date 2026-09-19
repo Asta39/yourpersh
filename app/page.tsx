@@ -2,6 +2,7 @@ import Hero from "@/components/sections/Hero";
 import HowItWorks from "@/components/sections/HowItWorks";
 import TwoWays from "@/components/sections/TwoWays";
 import EstimateTrack from "@/components/sections/EstimateTrack";
+import OrderCta from "@/components/sections/OrderCta";
 import Faq from "@/components/sections/Faq";
 import Trust from "@/components/sections/Trust";
 import Stores from "@/components/sections/Stores";
@@ -18,6 +19,7 @@ export default function Home() {
       <Stores />
       <Trust />
       <Faq />
+      <OrderCta />
     </main>
   );
 }

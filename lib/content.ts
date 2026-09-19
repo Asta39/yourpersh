@@ -335,3 +335,53 @@ export const faq = {
     },
   ],
 } as const;
+
+export const order = {
+  eyebrow: "Ready when you are",
+  title: "Let's get your first order moving.",
+  sub: "Tell us what you're after. We'll pick it up on WhatsApp, quote it, and take it from there.",
+  button: "Place an order",
+  pokeHint: "Poke the blob to wake it up.",
+  awake: "I'm up! Let's do this.",
+  grumpy: "Okay okay, I'm awake!",
+  modal: {
+    title: "Place an order",
+    description: "Three quick details, then we carry on in WhatsApp.",
+    close: "Close",
+  },
+  fields: {
+    name: { label: "Your name", placeholder: "Amina" },
+    cart: {
+      label: "Cart link or items",
+      placeholder: "Paste a cart link, or list what you want",
+    },
+    country: { label: "Deliver to", options: ["Kenya", "Uganda"] },
+  },
+  submit: "Continue on WhatsApp",
+  sending: "Sending you to WhatsApp!",
+  errors: {
+    name: "I need your name to continue.",
+    cart: "Add a link, or tell me what you want.",
+    country: "Pick Kenya or Uganda.",
+  },
+  speech: {
+    hello: "Hi! Tell me what you're after.",
+    idle: "Take your time. I'm listening.",
+    name: "What should I call you?",
+    cart: "Paste a cart link, or list the items.",
+    store: "Ooh, {store}! Good taste.",
+    country: "{country}, noted!",
+    sent: "Sent! Check WhatsApp.",
+  },
+  sent: {
+    title: "Order sent",
+    body: "We opened WhatsApp with your details. If you have photos, attach them in the chat.",
+    stamp: "Sent to WhatsApp",
+    summary: "Order summary",
+    nameLabel: "Name",
+    countryLabel: "Deliver to",
+    cartLabel: "Order",
+    open: "Open WhatsApp",
+    again: "Start another order",
+  },
+} as const;

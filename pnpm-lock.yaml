@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  feral-blob: 6f48ee049363a42596c841a7587ae5563bb5243345cf7c151406befeee4ee80f
+
 importers:
 
   .:
@@ -17,6 +20,9 @@ importers:
       cn:
         specifier: ^0.3.0
         version: 0.3.0
+      feral-blob:
+        specifier: ^0.2.0
+        version: 0.2.0(patch_hash=6f48ee049363a42596c841a7587ae5563bb5243345cf7c151406befeee4ee80f)(motion@13.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       feral-fur:
         specifier: ^0.1.1
         version: 0.1.1(react@19.2.8)
@@ -1582,6 +1588,13 @@ packages:
     peerDependenciesMeta:
       picomatch:
         optional: true
+
+  feral-blob@0.2.0:
+    resolution: {integrity: sha512-VCVpLiHd3i+fjcJpMlB0Qrxr9O/FTn/ui85J9pRgIbm+OmltApWaupEEkwqX/fDXf2txKT3U1xpFbIYtdqVK+w==}
+    peerDependencies:
+      motion: '>=11'
+      react: '>=18'
+      react-dom: '>=18'
 
   feral-fur@0.1.1:
     resolution: {integrity: sha512-ZnvHCE3jNymt4ha5632QI2ar6jYRGwhyeYrgmXvqgZBjSL9pOPiyOEGAZarSVEwqGxeYrZWBh1MrO74/iqdWiA==}
@@ -4695,6 +4708,12 @@ snapshots:
   fdir@6.5.0(picomatch@4.0.7):
     optionalDependencies:
       picomatch: 4.0.7
+
+  feral-blob@0.2.0(patch_hash=6f48ee049363a42596c841a7587ae5563bb5243345cf7c151406befeee4ee80f)(motion@13.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(react-dom@19.2.8(react@19.2.8))(react@19.2.8):
+    dependencies:
+      motion: 13.4.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+      react: 19.2.8
+      react-dom: 19.2.8(react@19.2.8)
 
   feral-fur@0.1.1(react@19.2.8):
     dependencies:
