@@ -177,3 +177,30 @@ export const stores = {
     { kind: "sticker", id: "pleading-cart", src: "/stickers/pleading-cart.webp", w: 152, dx: 76, dy: 82, rotate: 7 },
   ],
 } as const;
+
+export const twoWays = {
+  eyebrow: "Two ways to order",
+  title: "Two ways in. One way home.",
+  sub: "Send us a cart, or buy it yourself and ship it to our Dubai address. Either way it lands at the same hub and travels the same road to your door.",
+  modes: [
+    {
+      lane: "a",
+      tag: "A",
+      title: "We shop it for you",
+      lead: "Send us a cart link or photos of what you want.",
+      you: "Send the cart on WhatsApp",
+      we: "Buy it, consolidate in Dubai, ship and deliver",
+    },
+    {
+      lane: "b",
+      tag: "B",
+      title: "You shop, we forward",
+      lead: "Buy from any store and ship it to our Dubai address.",
+      you: "Order to our Dubai address",
+      we: "Receive it, consolidate, ship and deliver",
+    },
+  ],
+  places: { dubai: "Dubai hub", nairobi: "Nairobi", home: "Home" },
+  youLabel: "You",
+  weLabel: "We",
+} as const;
