@@ -2,6 +2,8 @@ import Hero from "@/components/sections/Hero";
 import HowItWorks from "@/components/sections/HowItWorks";
 import TwoWays from "@/components/sections/TwoWays";
 import EstimateTrack from "@/components/sections/EstimateTrack";
+import Faq from "@/components/sections/Faq";
+import Trust from "@/components/sections/Trust";
 import Stores from "@/components/sections/Stores";
 import Solutions from "@/components/sections/Solutions";
 
@@ -14,6 +16,8 @@ export default function Home() {
       <HowItWorks />
       <EstimateTrack />
       <Stores />
+      <Trust />
+      <Faq />
     </main>
   );
 }

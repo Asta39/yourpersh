@@ -24,20 +24,9 @@ const { rates } = estimate;
 
 function price(packed: readonly Item[]) {
   const subtotal = packed.reduce((sum, item) => sum + item.price, 0);
-  const kg = packed.reduce((sum, item) => sum + item.kg, 0);
-  if (!packed.length)
-    return { subtotal: 0, kg: 0, fee: 0, customs: 0, delivery: 0, total: 0 };
-  const fee = Math.max(rates.serviceFeeMin, subtotal * rates.serviceFeePct);
-  const customs = subtotal * rates.customsPct;
-  const delivery = Math.max(rates.deliveryMin, kg * rates.deliveryPerKg);
-  return {
-    subtotal,
-    kg,
-    fee,
-    customs,
-    delivery,
-    total: subtotal + fee + customs + delivery,
-  };
+  if (!packed.length) return { subtotal: 0, fee: 0, total: 0 };
+  const fee = subtotal * rates.serviceFeePct;
+  return { subtotal, fee, total: subtotal + fee };
 }
 
 export default function Estimator() {
@@ -235,16 +224,6 @@ export default function Estimator() {
                 <div className="flex justify-between">
                   <span>{copy.serviceFee}</span>
                   <AnimatedNumber value={totals.fee} />
-                </div>
-                <div className="flex justify-between">
-                  <span>{copy.customs}</span>
-                  <AnimatedNumber value={totals.customs} />
-                </div>
-                <div className="flex justify-between">
-                  <span>
-                    {copy.delivery} · {totals.kg.toFixed(1)} kg
-                  </span>
-                  <AnimatedNumber value={totals.delivery} />
                 </div>
               </div>
             ) : null}

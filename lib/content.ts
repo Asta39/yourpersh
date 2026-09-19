@@ -5,8 +5,8 @@
 
 export const navLinks = [
   { label: "How it works", href: "#how-it-works" },
-  { label: "Stores", href: "#stores" },
   { label: "Pricing", href: "#estimate" },
+  { label: "Stores", href: "#stores" },
   { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
 ] as const;
@@ -216,28 +216,20 @@ export const estimate = {
     empty: "Nothing packed yet. Add an item to see your price.",
     itemsLabel: "Items",
     serviceFee: "Service fee",
-    customs: "Customs & duties (est.)",
-    delivery: "Delivery",
     total: "Delivered price",
     stamp: "Quoted before we buy",
-    note: "Illustrative numbers for this concept, not Yopersh's real rates.",
+    note: "Item prices are illustrative. The 10% service fee is the rate stated in Yopersh's FAQ.",
     dropHint: "Drop here",
   },
-  /** Illustrative rates only. */
-  rates: {
-    serviceFeePct: 0.1,
-    serviceFeeMin: 3,
-    customsPct: 0.12,
-    deliveryPerKg: 7.5,
-    deliveryMin: 8,
-  },
+  /** The 10% service fee is stated in Yopersh's FAQ; it covers buying, Dubai shipping, customs and local delivery. */
+  rates: { serviceFeePct: 0.1 },
   items: [
-    { id: "dress", name: "Summer dress", price: 28, kg: 0.4, src: "/estimate/dress.webp", w: 254, h: 352 },
-    { id: "sneakers", name: "Sneakers", price: 45, kg: 1.0, src: "/estimate/sneakers.webp", w: 352, h: 326 },
-    { id: "handbag", name: "Handbag", price: 60, kg: 0.8, src: "/estimate/handbag.webp", w: 327, h: 352 },
-    { id: "perfume", name: "Perfume", price: 55, kg: 0.3, src: "/estimate/perfume.webp", w: 259, h: 352 },
-    { id: "phone", name: "Smartphone", price: 320, kg: 0.5, src: "/estimate/phone.webp", w: 222, h: 352 },
-    { id: "headphones", name: "Headphones", price: 90, kg: 0.6, src: "/estimate/headphones.webp", w: 302, h: 352 },
+    { id: "dress", name: "Summer dress", price: 28, src: "/estimate/dress.webp", w: 254, h: 352 },
+    { id: "sneakers", name: "Sneakers", price: 45, src: "/estimate/sneakers.webp", w: 352, h: 326 },
+    { id: "handbag", name: "Handbag", price: 60, src: "/estimate/handbag.webp", w: 327, h: 352 },
+    { id: "perfume", name: "Perfume", price: 55, src: "/estimate/perfume.webp", w: 259, h: 352 },
+    { id: "jacket", name: "Denim jacket", price: 55, src: "/estimate/jacket.webp", w: 352, h: 339 },
+    { id: "palette", name: "Makeup palette", price: 35, src: "/estimate/palette.webp", w: 345, h: 352 },
   ],
 } as const;
 
@@ -259,5 +251,87 @@ export const tracking = {
     { id: "nairobi", label: "Landed in Nairobi", detail: "Clearing customs", src: "/journey/nairobi.webp", w: 507, h: 516 },
     { id: "van", label: "Out for delivery", detail: "A van is heading your way", src: "/journey/van-green.webp", w: 516, h: 457 },
     { id: "home", label: "Delivered", detail: "Enjoy it!", src: "/journey/home.webp", w: 516, h: 511 },
+  ],
+} as const;
+
+export const trust = {
+  eyebrow: "Why shoppers stay",
+  title: "Built on the boring part: doing what we said.",
+  sub: "Anyone can buy a dress abroad. The hard part is everything that happens after, and that's the part we built the business around.",
+  promisesLabel: "Our promises",
+  promises: [
+    {
+      title: "Trust first",
+      body: "Prices and timelines you can rely on, and we tell you early if something will take longer.",
+    },
+    {
+      title: "Quality curation",
+      body: "We only suggest pieces we'd order ourselves.",
+    },
+    {
+      title: "Reliable delivery",
+      body: "Tracked from Dubai to your door, with real updates along the way.",
+    },
+    {
+      title: "People over parcels",
+      body: "Real humans on WhatsApp who care how it goes.",
+    },
+  ],
+  stats: {
+    orders: { label: "Orders delivered", to: 40, suffix: "k+", decimals: 0 },
+    rating: { label: "Google rating", to: 4.7, suffix: "", decimals: 1 },
+    reviews: { label: "Verified reviews", to: 88, suffix: "+", decimals: 0 },
+    countries: { label: "Countries served", to: 2, suffix: "", decimals: 0, names: ["Kenya", "Uganda"] },
+  },
+  chat: {
+    label: "Support",
+    title: "Real people on WhatsApp",
+    body: "Message us any time. A person answers, not a bot.",
+    cta: "Chat on WhatsApp",
+    messages: [
+      { from: "you", text: "Hi! Can you get this from Shein?" },
+      { from: "us", text: "Of course. Send the cart link and we'll quote it." },
+    ],
+  },
+  note: "Figures as shown on Yopersh's own site, used here for this concept.",
+} as const;
+
+export const faq = {
+  eyebrow: "The usual questions",
+  title: "Questions, answered.",
+  sub: "The things shoppers ask us most, from Yopersh's own FAQ.",
+  ctaLabel: "Still have a question?",
+  cta: "Ask us on WhatsApp",
+  items: [
+    {
+      id: "place-order",
+      title: "How do I place a Shein order?",
+      description:
+        "Browse Shein, copy the links to items you want (or your full cart link) and send them to us on WhatsApp. We'll quote the total cost including delivery.",
+    },
+    {
+      id: "delivery-cost",
+      title: "How much does Shein delivery cost?",
+      description:
+        "We charge 10% of your Shein order total as our service fee. This covers purchasing, Dubai shipping, customs clearance and local delivery.",
+    },
+    {
+      id: "delivery-time",
+      title: "How long does delivery take?",
+      description:
+        "Typically 2\u20133 weeks. We ship from Dubai every Friday, and customs clearance takes 3\u20137 days on arrival.",
+    },
+    {
+      id: "platforms",
+      title: "What other platforms can I order from?",
+      description:
+        "Amazon, Temu, Zara, ASOS, Sephora, Fashion Nova, PrettyLittleThing, H&M and more. Shop on the app, use our Dubai address at checkout, and we handle the rest.",
+    },
+    {
+      id: "restricted",
+      title: "What items are restricted?",
+      description:
+        "We can't ship mobile phones, power banks, lithium batteries, or items over 30kg. Contact us if you're unsure about a specific item.",
+    },
   ],
 } as const;
